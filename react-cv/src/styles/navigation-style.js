@@ -1,5 +1,5 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import purple from '@material-ui/core/colors/purple';
+import blue from '@material-ui/core/colors/blue';
 
 export const navigationStyle = (theme) => ({
 	navRoot: {
@@ -9,7 +9,7 @@ export const navigationStyle = (theme) => ({
 
 export const theme = createMuiTheme({
 	palette: {
-		primary: { main: purple[500] }, // Purple and green play nicely together.
+		primary: { main: blue[100] },
 		secondary: { main: '#11cb5f' } // This is just green.A700 as hex.
 	}
 });

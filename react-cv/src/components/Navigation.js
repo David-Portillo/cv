@@ -12,7 +12,7 @@ const Navigation = (props) => {
 	return (
 		<MuiThemeProvider theme={theme}>
 			<div className={classes.root}>
-				<AppBar position="static" color="secondary">
+				<AppBar position="static" color="primary">
 					<Toolbar>
 						<Typography variant="h6" color="inherit">
 							My Bio Application
