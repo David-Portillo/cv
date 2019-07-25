@@ -15,7 +15,7 @@ const Navigation = (props) => {
 				<AppBar position="static" color="primary">
 					<Toolbar>
 						<Typography variant="h6" color="inherit">
-							My Bio Application
+							My Application
 						</Typography>
 					</Toolbar>
 				</AppBar>
@@ -25,7 +25,7 @@ const Navigation = (props) => {
 };
 
 Navigation.propTypes = {
-	classes: PropTypes.object.isRequired
+	classes : PropTypes.object.isRequired
 };
 
 export default withStyles(navigationStyle)(Navigation);
