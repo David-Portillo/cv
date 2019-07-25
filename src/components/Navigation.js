@@ -15,7 +15,7 @@ const Navigation = (props) => {
 				<AppBar position="static" color="primary">
 					<Toolbar>
 						<Typography variant="h6" color="inherit">
-							My Application
+							My Bio Application
 						</Typography>
 					</Toolbar>
 				</AppBar>
