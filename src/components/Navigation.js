@@ -1,10 +1,11 @@
 import React from 'react';
+import { Menu } from 'semantic-ui-react'
 
 const Navigation = (props) => {
 	return (
-			<div>
-			Header
-			</div>
+	<Menu>
+		<Menu.Item header>Bio</Menu.Item>
+	</Menu>
 
 	);
 };
