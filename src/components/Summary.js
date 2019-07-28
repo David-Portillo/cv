@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Icon, Image, Container, Header, Grid } from 'semantic-ui-react';
+import { Card, Icon, Image, Container, Header, Grid, Divider } from 'semantic-ui-react';
 
 class Summary extends Component {
 	render() {
@@ -9,17 +9,15 @@ class Summary extends Component {
 					text
 					textAlign="left"
 					style={{
-						marginTop: '4vh'
-					}}
-				>
+						marginTop : '4vh'
+					}}>
 					<Grid columns={2} stackable>
 						<Grid.Row>
 							<Grid.Column
 								style={{
-									display: 'flex',
-									justifyContent: 'center'
-								}}
-							>
+									display        : 'flex',
+									justifyContent : 'center'
+								}}>
 								<Card>
 									<Image src="https://via.placeholder.com/250" />
 									<Card.Content>
@@ -51,10 +49,17 @@ class Summary extends Component {
 				</Container>
 				<Container
 					text
+					hidden
 					style={{
-						marginTop: '4vh'
-					}}
-				>
+						marginTop : '4vh'
+					}}>
+					<Divider />
+				</Container>
+				<Container
+					text
+					style={{
+						marginTop : '4vh'
+					}}>
 					<Header>Summary</Header>
 					<p>
 						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
