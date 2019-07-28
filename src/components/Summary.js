@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Icon, Image, Container, Header, Grid, Divider } from 'semantic-ui-react';
+import { Card, Icon, Image, Container, Header, Grid, Divider, Segment } from 'semantic-ui-react';
 
 class Summary extends Component {
 	render() {
@@ -86,6 +86,9 @@ class Summary extends Component {
 						ultricies nisi.
 					</p>
 				</Container>
+				<Segment inverted style={{ margin: '5em 0em 0em', padding: '5em 0em' }} vertical>
+					<Container textAlign="center" />
+				</Segment>
 			</div>
 		);
 	}
