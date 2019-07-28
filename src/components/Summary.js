@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Card, Icon, Image, Container, Header, Grid, Divider, Segment } from 'semantic-ui-react';
+import avatarOne from '../assets/avatarOne.jpg';
 
 class Summary extends Component {
 	render() {
@@ -19,7 +20,14 @@ class Summary extends Component {
 									justifyContent : 'center'
 								}}>
 								<Card>
-									<Image src="https://via.placeholder.com/250" />
+									<Image
+										src={avatarOne}
+										style={{
+											width     : 'auto',
+											height    : '250px',
+											objectFit : 'cover'
+										}}
+									/>
 									<Card.Content>
 										<Card.Header>David Portillo</Card.Header>
 										<Card.Meta>
