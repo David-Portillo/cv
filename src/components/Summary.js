@@ -1,10 +1,22 @@
 import React, { Component } from 'react';
-import { Card, Icon, Image, Container, Header, Grid, Divider } from 'semantic-ui-react';
+import { Card, Icon, Image, Container, Header, Grid, Divider, List, Accordion, Segment, Flag } from 'semantic-ui-react';
 import Footer from './Footer';
 import avatarOne from '../assets/avatarOne.jpg';
 import { summaryStyle } from '../styles/summary-style';
 
 class Summary extends Component {
+	state = {
+		activeProjectIndex: 0
+	};
+
+	handleActiveProject = (e, project) => {
+		const { index } = project;
+		const { activeProjectIndex } = this.state;
+
+		this.setState((prevState) => {
+			if (prevState.active !== index) return { activeProjectIndex: index };
+		});
+	};
 	render() {
 		return (
 			<div>
@@ -15,7 +27,9 @@ class Summary extends Component {
 								<Card>
 									<Image src={avatarOne} style={summaryStyle.avatar} />
 									<Card.Content>
-										<Card.Header>David Portillo</Card.Header>
+										<Card.Header>
+											David Portillo  <Flag name="canada" />
+										</Card.Header>
 										<Card.Meta>
 											<span className="date">my little subtitle</span>
 										</Card.Meta>
@@ -70,6 +84,106 @@ class Summary extends Component {
 						laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper
 						ultricies nisi.
 					</p>
+				</Container>
+				<Container text textAlign="left" style={summaryStyle.container}>
+					<Header>Summary</Header>
+					<Grid columns={3} stackable textAlign="left" padded>
+						<Grid.Column>
+							<List>
+								<List.Item>
+									<List.Icon name="users" />
+									<List.Content>Value 1</List.Content>
+								</List.Item>
+								<List.Item>
+									<List.Icon name="users" />
+									<List.Content>Value 2</List.Content>
+								</List.Item>
+								<List.Item>
+									<List.Icon name="users" />
+									<List.Content>Value 3</List.Content>
+								</List.Item>
+								<List.Item>
+									<List.Icon name="users" />
+									<List.Content>Value 4</List.Content>
+								</List.Item>
+							</List>
+						</Grid.Column>
+						<Grid.Column>
+							<List>
+								<List.Item>
+									<List.Icon name="users" />
+									<List.Content>Value 1</List.Content>
+								</List.Item>
+								<List.Item>
+									<List.Icon name="users" />
+									<List.Content>Value 2</List.Content>
+								</List.Item>
+								<List.Item>
+									<List.Icon name="users" />
+									<List.Content>Value 3</List.Content>
+								</List.Item>
+								<List.Item>
+									<List.Icon name="users" />
+									<List.Content>Value 4</List.Content>
+								</List.Item>
+							</List>
+						</Grid.Column>
+						<Grid.Column>
+							<List>
+								<List.Item>
+									<List.Icon name="users" />
+									<List.Content>Value 1</List.Content>
+								</List.Item>
+								<List.Item>
+									<List.Icon name="users" />
+									<List.Content>Value 2</List.Content>
+								</List.Item>
+								<List.Item>
+									<List.Icon name="users" />
+									<List.Content>Value 3</List.Content>
+								</List.Item>
+								<List.Item>
+									<List.Icon name="users" />
+									<List.Content>Value 4</List.Content>
+								</List.Item>
+							</List>
+						</Grid.Column>
+					</Grid>
+				</Container>
+				<Container text textAlign="left" style={summaryStyle.container}>
+					<Header>Summary</Header>
+					<Accordion fluid styled>
+						<Accordion.Title
+							active={this.state.activeProjectIndex === 0}
+							index={0}
+							onClick={this.handleActiveProject}>
+							<Icon name="dropdown" />
+							Project 1
+						</Accordion.Title>
+						<Accordion.Content active={this.state.activeProjectIndex === 0}>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel beatae maxime eveniet
+								aspernatur esse modi id tempore, et officiis, dolorem, cum molestiae! Aspernatur
+								explicabo atque minus. Eos velit nesciunt quasi?
+							</p>
+						</Accordion.Content>
+					</Accordion>
+					<Accordion fluid styled>
+						<Accordion.Title
+							active={this.state.activeProjectIndex === 1}
+							index={1}
+							onClick={this.handleActiveProject}>
+							<Icon name="dropdown" />
+							Project 2
+						</Accordion.Title>
+						<Accordion.Content active={this.state.activeProjectIndex === 1}>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel beatae maxime eveniet
+								aspernatur esse modi id tempore, et officiis, dolorem, cum molestiae! Aspernatur
+								explicabo atque minus. Eos velit nesciunt quasi?
+							</p>
+						</Accordion.Content>
+					</Accordion>
 				</Container>
 
 				<Footer />
