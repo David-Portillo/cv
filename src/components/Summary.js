@@ -28,7 +28,7 @@ class Summary extends Component {
 									<Image src={avatarOne} style={summaryStyle.avatar} />
 									<Card.Content>
 										<Card.Header>
-											David Portillo  <Flag name="canada" />
+											David Portillo <Flag name="canada" />
 										</Card.Header>
 										<Card.Meta>
 											<span className="date">my little subtitle</span>
@@ -87,7 +87,7 @@ class Summary extends Component {
 				</Container>
 				<Container text textAlign="left" style={summaryStyle.container}>
 					<Header>Summary</Header>
-					<Grid columns={3} stackable textAlign="left" padded>
+					<Grid columns={3} textAlign="left" padded>
 						<Grid.Column>
 							<List>
 								<List.Item>
