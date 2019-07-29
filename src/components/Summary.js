@@ -1,33 +1,19 @@
 import React, { Component } from 'react';
-import { Card, Icon, Image, Container, Header, Grid, Divider, Segment } from 'semantic-ui-react';
+import { Card, Icon, Image, Container, Header, Grid, Divider } from 'semantic-ui-react';
+import Footer from './Footer';
 import avatarOne from '../assets/avatarOne.jpg';
+import { summaryStyle } from '../styles/summary-style';
 
 class Summary extends Component {
 	render() {
 		return (
 			<div>
-				<Container
-					text
-					textAlign="left"
-					style={{
-						marginTop : '4vh'
-					}}>
+				<Container text textAlign="left" style={summaryStyle.container}>
 					<Grid columns={2} stackable>
 						<Grid.Row>
-							<Grid.Column
-								style={{
-									display        : 'flex',
-									justifyContent : 'center'
-								}}>
+							<Grid.Column style={summaryStyle.columnCard}>
 								<Card>
-									<Image
-										src={avatarOne}
-										style={{
-											width     : 'auto',
-											height    : '250px',
-											objectFit : 'cover'
-										}}
-									/>
+									<Image src={avatarOne} style={summaryStyle.avatar} />
 									<Card.Content>
 										<Card.Header>David Portillo</Card.Header>
 										<Card.Meta>
@@ -55,19 +41,10 @@ class Summary extends Component {
 						</Grid.Row>
 					</Grid>
 				</Container>
-				<Container
-					text
-					hidden
-					style={{
-						marginTop : '4vh'
-					}}>
+				<Container text hidden style={summaryStyle.container}>
 					<Divider />
 				</Container>
-				<Container
-					text
-					style={{
-						marginTop : '4vh'
-					}}>
+				<Container text style={summaryStyle.container}>
 					<Header>Summary</Header>
 					<p>
 						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
@@ -94,9 +71,8 @@ class Summary extends Component {
 						ultricies nisi.
 					</p>
 				</Container>
-				<Segment inverted style={{ margin: '5em 0em 0em', padding: '5em 0em' }} vertical>
-					<Container textAlign="center" />
-				</Segment>
+
+				<Footer />
 			</div>
 		);
 	}
