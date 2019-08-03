@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-import { Card, Icon, Image, Container, Header, Grid, Divider, List, Accordion, Flag } from 'semantic-ui-react';
+import { Card, Icon, Image, Container, Header, Grid, Divider, List, Accordion, Flag, Segment } from 'semantic-ui-react';
 import Footer from './Footer';
 import avatarOne from '../assets/avatarOne.jpg';
 import { summaryStyle } from '../styles/summary-style';
 
 class Summary extends Component {
 	state = {
-		activeProjectIndex: 0
+		activeProjectIndex : 0
 	};
 
 	handleActiveProject = (e, project) => {
 		const { index } = project;
-
 
 		this.setState((prevState) => {
 			if (prevState.active !== index) return { activeProjectIndex: index };
@@ -21,7 +20,7 @@ class Summary extends Component {
 		const { activeProjectIndex } = this.state;
 		return (
 			<div>
-				<Container text textAlign="left" style={summaryStyle.container}>
+				<Container text textAlign='left' style={summaryStyle.container}>
 					<Grid columns={2} stackable>
 						<Grid.Row>
 							<Grid.Column style={summaryStyle.columnCard}>
@@ -29,15 +28,15 @@ class Summary extends Component {
 									<Image src={avatarOne} style={summaryStyle.avatar} />
 									<Card.Content>
 										<Card.Header>
-											David Portillo <Flag name="canada" />
+											David Portillo <Flag name='canada' />
 										</Card.Header>
 										<Card.Meta>
-											<span className="date">my little subtitle</span>
+											<span className='date'>my little subtitle</span>
 										</Card.Meta>
 										<Card.Description>David is a software developer.</Card.Description>
 									</Card.Content>
 									<Card.Content extra>
-										<Icon name="user" />
+										<Icon name='user' />
 									</Card.Content>
 								</Card>
 							</Grid.Column>
@@ -86,79 +85,67 @@ class Summary extends Component {
 						ultricies nisi.
 					</p>
 				</Container>
-				<Container text textAlign="left" style={summaryStyle.container}>
-					<Header>Summary</Header>
-					<Grid columns={3} textAlign="left" padded>
+				<Container text textAlign='left' style={summaryStyle.container}>
+					<Header content='Skills' />
+					<Grid columns={3}>
 						<Grid.Column>
-							<List>
-								<List.Item>
-									<List.Icon name="users" />
-									<List.Content>Value 1</List.Content>
-								</List.Item>
-								<List.Item>
-									<List.Icon name="users" />
-									<List.Content>Value 2</List.Content>
-								</List.Item>
-								<List.Item>
-									<List.Icon name="users" />
-									<List.Content>Value 3</List.Content>
-								</List.Item>
-								<List.Item>
-									<List.Icon name="users" />
-									<List.Content>Value 4</List.Content>
-								</List.Item>
-							</List>
+							<Header as='h3' dividing textAlign='center'>
+								Proficient
+							</Header>
+							<Segment textAlign='center'>
+								<List>
+									<List.Item>
+										<List.Content>Springboot</List.Content>
+									</List.Item>
+									<List.Item>
+										<List.Content>React JS</List.Content>
+									</List.Item>
+									<List.Item>
+										<List.Content>Azure DB</List.Content>
+									</List.Item>
+								</List>
+							</Segment>
 						</Grid.Column>
 						<Grid.Column>
-							<List>
-								<List.Item>
-									<List.Icon name="users" />
-									<List.Content>Value 1</List.Content>
-								</List.Item>
-								<List.Item>
-									<List.Icon name="users" />
-									<List.Content>Value 2</List.Content>
-								</List.Item>
-								<List.Item>
-									<List.Icon name="users" />
-									<List.Content>Value 3</List.Content>
-								</List.Item>
-								<List.Item>
-									<List.Icon name="users" />
-									<List.Content>Value 4</List.Content>
-								</List.Item>
-							</List>
+							<Header as='h3' dividing textAlign='center'>
+								Proficient
+							</Header>
+							<Segment textAlign='center'>
+								<List>
+									<List.Item>
+										<List.Content>Springboot</List.Content>
+									</List.Item>
+									<List.Item>
+										<List.Content>React JS</List.Content>
+									</List.Item>
+									<List.Item>
+										<List.Content>Azure DB</List.Content>
+									</List.Item>
+								</List>
+							</Segment>
 						</Grid.Column>
 						<Grid.Column>
-							<List>
-								<List.Item>
-									<List.Icon name="users" />
-									<List.Content>Value 1</List.Content>
-								</List.Item>
-								<List.Item>
-									<List.Icon name="users" />
-									<List.Content>Value 2</List.Content>
-								</List.Item>
-								<List.Item>
-									<List.Icon name="users" />
-									<List.Content>Value 3</List.Content>
-								</List.Item>
-								<List.Item>
-									<List.Icon name="users" />
-									<List.Content>Value 4</List.Content>
-								</List.Item>
-							</List>
+							<Header as='h3' dividing textAlign='center'>
+								Languages
+							</Header>
+							<Segment textAlign='center'>
+								<List>
+									<List.Item>
+										<List.Content>English</List.Content>
+									</List.Item>
+									<List.Item>
+										<List.Content>Spanish</List.Content>
+									</List.Item>
+								</List>
+							</Segment>
 						</Grid.Column>
 					</Grid>
 				</Container>
-				<Container text textAlign="left" style={summaryStyle.container}>
-					<Header>Summary</Header>
+				<Container text textAlign='left' style={summaryStyle.container}>
+					<Header>Projects</Header>
 					<Accordion fluid styled>
-						<Accordion.Title
-							active={activeProjectIndex === 0}
-							index={0}
-							onClick={this.handleActiveProject}>
-							<Icon name="dropdown" />
+						<Accordion.Title active={activeProjectIndex === 0} index={0} onClick={this.handleActiveProject}>
+							<Icon name='dropdown' />
 							Project 1
 						</Accordion.Title>
 						<Accordion.Content active={activeProjectIndex === 0}>
@@ -170,14 +157,24 @@ class Summary extends Component {
 						</Accordion.Content>
 					</Accordion>
 					<Accordion fluid styled>
-						<Accordion.Title
-							active={activeProjectIndex === 1}
-							index={1}
-							onClick={this.handleActiveProject}>
-							<Icon name="dropdown" />
+						<Accordion.Title active={activeProjectIndex === 1} index={1} onClick={this.handleActiveProject}>
+							<Icon name='dropdown' />
 							Project 2
 						</Accordion.Title>
 						<Accordion.Content active={activeProjectIndex === 1}>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel beatae maxime eveniet
+								aspernatur esse modi id tempore, et officiis, dolorem, cum molestiae! Aspernatur
+								explicabo atque minus. Eos velit nesciunt quasi?
+							</p>
+						</Accordion.Content>
+					</Accordion>
+					<Accordion fluid styled>
+						<Accordion.Title active={activeProjectIndex === 2} index={2} onClick={this.handleActiveProject}>
+							<Icon name='dropdown' />
+							Project 3
+						</Accordion.Title>
+						<Accordion.Content active={activeProjectIndex === 2}>
 							<p>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel beatae maxime eveniet
 								aspernatur esse modi id tempore, et officiis, dolorem, cum molestiae! Aspernatur
