@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Icon, Image, Container, Header, Grid, Divider, List, Accordion, Segment, Flag } from 'semantic-ui-react';
+import { Card, Icon, Image, Container, Header, Grid, Divider, List, Accordion, Flag } from 'semantic-ui-react';
 import Footer from './Footer';
 import avatarOne from '../assets/avatarOne.jpg';
 import { summaryStyle } from '../styles/summary-style';
@@ -11,13 +11,14 @@ class Summary extends Component {
 
 	handleActiveProject = (e, project) => {
 		const { index } = project;
-		const { activeProjectIndex } = this.state;
+
 
 		this.setState((prevState) => {
 			if (prevState.active !== index) return { activeProjectIndex: index };
 		});
 	};
 	render() {
+		const { activeProjectIndex } = this.state;
 		return (
 			<div>
 				<Container text textAlign="left" style={summaryStyle.container}>
@@ -154,13 +155,13 @@ class Summary extends Component {
 					<Header>Summary</Header>
 					<Accordion fluid styled>
 						<Accordion.Title
-							active={this.state.activeProjectIndex === 0}
+							active={activeProjectIndex === 0}
 							index={0}
 							onClick={this.handleActiveProject}>
 							<Icon name="dropdown" />
 							Project 1
 						</Accordion.Title>
-						<Accordion.Content active={this.state.activeProjectIndex === 0}>
+						<Accordion.Content active={activeProjectIndex === 0}>
 							<p>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel beatae maxime eveniet
 								aspernatur esse modi id tempore, et officiis, dolorem, cum molestiae! Aspernatur
@@ -170,13 +171,13 @@ class Summary extends Component {
 					</Accordion>
 					<Accordion fluid styled>
 						<Accordion.Title
-							active={this.state.activeProjectIndex === 1}
+							active={activeProjectIndex === 1}
 							index={1}
 							onClick={this.handleActiveProject}>
 							<Icon name="dropdown" />
 							Project 2
 						</Accordion.Title>
-						<Accordion.Content active={this.state.activeProjectIndex === 1}>
+						<Accordion.Content active={activeProjectIndex === 1}>
 							<p>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel beatae maxime eveniet
 								aspernatur esse modi id tempore, et officiis, dolorem, cum molestiae! Aspernatur
