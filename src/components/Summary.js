@@ -136,6 +136,9 @@ class Summary extends Component {
 									<List.Item>
 										<List.Content>Spanish</List.Content>
 									</List.Item>
+									<List.Item>
+										<List.Content>{String.fromCharCode('U+2002')}</List.Content>
+									</List.Item>
 								</List>
 							</Segment>
 						</Grid.Column>
