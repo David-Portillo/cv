@@ -4,7 +4,7 @@ import { footerStyle } from '../styles/footer-style';
 const Footer = (props) => {
 	return (
 		<Segment inverted style={footerStyle.footer} vertical>
-			<Container textAlign="center" />
+			<Container textAlign='center'>TExt</Container>
 		</Segment>
 	);
 };

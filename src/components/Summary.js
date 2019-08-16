@@ -33,7 +33,7 @@ class Summary extends Component {
 										<Card.Meta>
 											<span className='date'>my little subtitle</span>
 										</Card.Meta>
-										<Card.Description>David is a software developer.</Card.Description>
+										<Card.Description>David is a full stack Java developer.</Card.Description>
 									</Card.Content>
 									<Card.Content extra>
 										<Icon name='user' />
@@ -137,7 +137,7 @@ class Summary extends Component {
 										<List.Content>Spanish</List.Content>
 									</List.Item>
 									<List.Item>
-										<List.Content>{String.fromCharCode('U+2002')}</List.Content>
+										<List.Content>French (learning)</List.Content>
 									</List.Item>
 								</List>
 							</Segment>
