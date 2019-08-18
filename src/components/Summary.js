@@ -41,15 +41,14 @@ class Summary extends Component {
 								</Card>
 							</Grid.Column>
 							<Grid.Column>
-								<Header>Summary</Header>
+								<Header>About</Header>
 								<p>
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-									dolor. Aenean massa strong. Cum sociis natoque penatibus et magnis dis parturient
-									montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-									pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
-									aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis
-									vitae, justo. Nullam dictum felis eu pede link mollis pretium. Integer tincidunt.
-									Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+									I’m a full stack software developer at Atos/Syntel, skilled in developing software
+									with best practices using React JS framework with Java Spring Boot technologies and
+									building, managing Microsoft’s Azure DB. I’m a highly motivated and professional
+									developer that has demonstrated the ability to meet goals and exceed expectations, I
+									thrive in finding creative solutions that focuses in resolving and fulfilling
+									client’s needs.
 								</p>
 							</Grid.Column>
 						</Grid.Row>
@@ -59,7 +58,7 @@ class Summary extends Component {
 					<Divider />
 				</Container>
 				<Container text style={summaryStyle.container}>
-					<Header>Summary</Header>
+					<Header>Objective</Header>
 					<p>
 						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
 						Aenean massa strong. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
