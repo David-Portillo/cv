@@ -45,7 +45,7 @@ class Summary extends Component {
 								<p>
 									I’m a full stack software developer at Atos/Syntel, skilled in developing software
 									with best practices using React JS framework with Java Spring Boot technologies and
-									building, managing Microsoft’s Azure DB. I’m a highly motivated and professional
+									building, managing Microsoft’s Azure SQL. I’m a highly motivated and professional
 									developer that has demonstrated the ability to meet goals and exceed expectations, I
 									thrive in finding creative solutions that focuses in resolving and fulfilling
 									client’s needs.
