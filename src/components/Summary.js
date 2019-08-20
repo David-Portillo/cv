@@ -28,28 +28,45 @@ class Summary extends Component {
 									<Image src={avatarOne} style={summaryStyle.avatar} />
 									<Card.Content>
 										<Card.Header>
-											David Portillo <Flag name='canada' />
+											David Portillo &nbsp;
+											<Flag name='canada' />
 										</Card.Header>
 										<Card.Meta>
-											<span className='date'>my little subtitle</span>
+											<span className='date'>Full Stack Java Developer</span>
 										</Card.Meta>
-										<Card.Description>David is a full stack Java developer.</Card.Description>
+										<Card.Description>placeholder</Card.Description>
 									</Card.Content>
-									<Card.Content extra>
-										<Icon name='user' />
+									<Card.Content extra textAlign='center'>
+										<Icon name='music' /> &nbsp;
+										<Icon name='plane' /> &nbsp;
+										<Icon name='tv' /> &nbsp;
+										<Icon name='code' /> &nbsp;
+										<Icon name='game' /> &nbsp;
+										<Icon name='beer' />
 									</Card.Content>
 								</Card>
 							</Grid.Column>
 							<Grid.Column>
 								<Header>About</Header>
 								<p>
-									I’m a full stack software developer at Atos/Syntel, skilled in developing software
-									with best practices using React JS framework with Java Spring Boot technologies and
-									building, managing Microsoft’s Azure SQL. I’m a highly motivated and professional
+									I’m a full stack Java developer at Atos/Syntel, skilled in developing software with
+									best practices using React JS framework with Java Spring Boot technologies and
+									building, managing Microsoft’s Azure SQL. I’m an initiative-taking and professional
 									developer that has demonstrated the ability to meet goals and exceed expectations, I
 									thrive in finding creative solutions that focuses in resolving and fulfilling
 									client’s needs.
 								</p>
+								<Header>Favorite Quote</Header>
+								<q>
+									Success is not final; failure is not fatal. It is the courage to continue that
+									counts
+								</q>
+								<div
+									style={{
+										textAlign : 'right'
+									}}>
+									- Winston Churchill
+								</div>
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>
@@ -60,28 +77,8 @@ class Summary extends Component {
 				<Container text style={summaryStyle.container}>
 					<Header>Objective</Header>
 					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-						Aenean massa strong. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-						ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-						consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-						In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede link
-						mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
-						eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam
-						lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
-						laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper
-						ultricies nisi.
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-						Aenean massa strong. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-						ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-						consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-						In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede link
-						mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
-						eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam
-						lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
-						laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper
-						ultricies nisi.
+						To seek oportunity to create innovative application solutions that focuses on resolving business
+						problems.
 					</p>
 				</Container>
 				<Container text textAlign='left' style={summaryStyle.container}>
@@ -144,18 +141,40 @@ class Summary extends Component {
 					</Grid>
 				</Container>
 				<Container text textAlign='left' style={summaryStyle.container}>
-					<Header>Projects</Header>
+					<Header>Experience</Header>
 					<Accordion fluid styled>
 						<Accordion.Title active={activeProjectIndex === 0} index={0} onClick={this.handleActiveProject}>
 							<Icon name='dropdown' />
-							Project 1
+							Atos/Syntel
 						</Accordion.Title>
 						<Accordion.Content active={activeProjectIndex === 0}>
 							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel beatae maxime eveniet
-								aspernatur esse modi id tempore, et officiis, dolorem, cum molestiae! Aspernatur
-								explicabo atque minus. Eos velit nesciunt quasi?
+								I collaborated in an ECOM development team, helped develop many different microservice
+								applications using Spring Boot Framework (Java), front-end applications using React Js,
+								Redux and Material UI, maintained and developed databases using Microsoft Server Azure
+								SQL and MySQL that would in turn help fulfill clients needs.<br />
+								Using Agile, I’ve worked closely with clients to gather business requirements, created
+								and completed user stories, participated in daily stand-ups, and executed SDLC. Upon
+								joining the team I’ve collaborated in migrating legacy application that needed to be
+								changed from Struts technology to Spring Boot refactoring legacy code into a
+								maintainable, scalable code. <br />
+								Created many small Proof of Concept for other teams to help them find creative solutions
+								to their client’s needs.
+								<br />
+								<br />
+								<i>
+									<b>Focal points:</b>
+								</i>
 							</p>
+
+							<ul>
+								<li>Developed Microservices using Spring Boot Framework (Java).</li>
+								<li>Carefully created database designs using UML, ERDs.</li>
+								<li>Developed, managed and implemented Microsoft Server Azure SQL.</li>
+								<li>Participated in an agile development team.</li>
+								<li>Managed an offshore team for project development.</li>
+								<li>Developed CRUD applications using React Js, Redux, GraphQL, Material UI.</li>
+							</ul>
 						</Accordion.Content>
 					</Accordion>
 					<Accordion fluid styled>
