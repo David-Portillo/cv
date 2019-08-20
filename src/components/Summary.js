@@ -1,5 +1,18 @@
 import React, { Component } from 'react';
-import { Card, Icon, Image, Container, Header, Grid, Divider, List, Accordion, Flag, Segment } from 'semantic-ui-react';
+import {
+	Card,
+	Icon,
+	Image,
+	Container,
+	Header,
+	Grid,
+	Divider,
+	List,
+	Accordion,
+	Flag,
+	Segment,
+	Popup
+} from 'semantic-ui-react';
 import Footer from './Footer';
 import avatarOne from '../assets/avatarOne.jpg';
 import { summaryStyle } from '../styles/summary-style';
@@ -37,12 +50,22 @@ class Summary extends Component {
 										<Card.Description>placeholder</Card.Description>
 									</Card.Content>
 									<Card.Content extra textAlign='center'>
-										<Icon name='music' /> &nbsp;
-										<Icon name='plane' /> &nbsp;
-										<Icon name='tv' /> &nbsp;
-										<Icon name='code' /> &nbsp;
-										<Icon name='game' /> &nbsp;
-										<Icon name='beer' />
+										<Popup content='I enjoy listening to music' trigger={<Icon name='music' />} />
+										&nbsp;
+										<Popup
+											content='I like travelling to new places'
+											trigger={<Icon name='plane' />}
+										/>
+										&nbsp;
+										<Popup content='I like to chill by watching tv' trigger={<Icon name='tv' />} />
+										&nbsp;
+										<Popup content='I code, code, code' trigger={<Icon name='code' />} /> &nbsp;
+										<Popup
+											content='I enjoy playing games with an interesting story'
+											trigger={<Icon name='game' />}
+										/>
+										&nbsp;
+										<Popup content='no need to explain' trigger={<Icon name='beer' />} />
 									</Card.Content>
 								</Card>
 							</Grid.Column>
