@@ -21,8 +21,16 @@ export const summaryObject = {
     client’s needs.`,
 
 	favQuote         : {
-		quote  : `Success is not final; failure is not fatal. It is the courage to continue that counts`,
-		author : '- Winston Churchill'
+		quote : () => {
+			return (
+				<span>
+					<q>Success is not final; failure is not fatal. It is the courage to continue that counts</q>
+					<div style={{ textAlign: 'right', paddingTop: '10px' }}>
+						<p>- Winston Churchill</p>
+					</div>
+				</span>
+			);
+		}
 	},
 
 	objectiveContent : `
