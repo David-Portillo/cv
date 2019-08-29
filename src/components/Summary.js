@@ -70,7 +70,7 @@ class Summary extends Component {
 									content='Favorite Quote'
 									style={{ padding: '5px', backgroundColor: '#bbded6' }}
 								/>
-								{summaryObject.favQuote.quote()}
+								{summaryObject.favQuote()}
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>

@@ -20,17 +20,15 @@ export const summaryObject = {
     thrive in finding creative solutions that focuses in resolving and fulfilling
     client’s needs.`,
 
-	favQuote         : {
-		quote : () => {
-			return (
-				<span>
-					<q>Success is not final; failure is not fatal. It is the courage to continue that counts</q>
-					<div style={{ textAlign: 'right', paddingTop: '10px' }}>
-						<p>- Winston Churchill</p>
-					</div>
-				</span>
-			);
-		}
+	favQuote         : () => {
+		return (
+			<span>
+				<q>Success is not final; failure is not fatal. It is the courage to continue that counts</q>
+				<div style={{ textAlign: 'right', paddingTop: '10px' }}>
+					<p>- Winston Churchill</p>
+				</div>
+			</span>
+		);
 	},
 
 	objectiveContent : `
