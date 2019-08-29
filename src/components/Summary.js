@@ -64,9 +64,12 @@ class Summary extends Component {
 								</Card>
 							</Grid.Column>
 							<Grid.Column>
-								<Header style={{ padding: '5px', backgroundColor: '#bbded6' }}>About</Header>
+								<Header content='About Me' style={{ padding: '5px', backgroundColor: '#bbded6' }} />
 								<p>{summaryObject.aboutContent}</p>
-								<Header style={{ padding: '5px', backgroundColor: '#bbded6' }}>Favorite Quote</Header>
+								<Header
+									content='Favorite Quote'
+									style={{ padding: '5px', backgroundColor: '#bbded6' }}
+								/>
 								<q>{summaryObject.favQuote.quote}</q>
 								<div
 									style={{
@@ -82,14 +85,12 @@ class Summary extends Component {
 					<Divider />
 				</Container>
 				<Container text style={summaryStyle.container}>
-					<Header style={{ padding: '5px', backgroundColor: '#bbded6' }}>Objective</Header>
+					<Header content='Objective' style={{ padding: '5px', backgroundColor: '#bbded6' }} />
 					<p>{summaryObject.objectiveContent}</p>
 				</Container>
 				<Container text textAlign='left' style={summaryStyle.container}>
 					<Header content='Skills' style={{ padding: '5px', backgroundColor: '#bbded6' }} />
-					<Header as='h3' dividing textAlign='center'>
-						Proficient
-					</Header>
+					<Header content='Proficient' as='h3' dividing textAlign='center' />
 					<Segment textAlign='center'>
 						<List horizontal>
 							{summaryObject.skills.proficient.map((skill, index) => {
@@ -101,19 +102,17 @@ class Summary extends Component {
 							})}
 						</List>
 					</Segment>
-					<Header as='h3' dividing textAlign='center'>
-						Languages
-					</Header>
+					<Header content='Experienced' as='h3' dividing textAlign='center' />
 					<Grid columns={3}>
-						{summaryObject.skills.languages.map((language, index) => {
+						{summaryObject.skills.experienced.map((exp, index) => {
 							return (
-								<Grid.Column key={`lang-${index}`}>
+								<Grid.Column key={`exp-${index}`}>
 									{/* title can go here */}
 									<Segment textAlign='center'>
 										<List>
-											{language.list.map((item, index) => {
+											{exp.list.map((item, index) => {
 												return (
-													<List.Item key={`lang-item-${index}`}>
+													<List.Item key={`exp-item-${index}`}>
 														<List.Content>{item}</List.Content>
 													</List.Item>
 												);
@@ -124,42 +123,28 @@ class Summary extends Component {
 							);
 						})}
 					</Grid>
+					<Header content='Languages' as='h3' dividing textAlign='center' />
+					<Segment textAlign='center'>
+						<List horizontal>
+							{summaryObject.languages.map((language, index) => {
+								return (
+									<List.Item key={`lang-${index}`}>
+										<List.Content>{language}</List.Content>
+									</List.Item>
+								);
+							})}
+						</List>
+					</Segment>
 				</Container>
 				<Container text textAlign='left' style={summaryStyle.container}>
-					<Header style={{ padding: '5px', backgroundColor: '#bbded6' }}>Experience</Header>
+					<Header content='Work Experience' style={{ padding: '5px', backgroundColor: '#bbded6' }} />
 					<Accordion fluid styled>
 						<Accordion.Title active={activeExpIndex === 0} index={0} onClick={this.handleActiveProject}>
 							<Icon name='dropdown' />
-							Atos/Syntel
+							{summaryObject.workExperience.exp1.companyName}
 						</Accordion.Title>
 						<Accordion.Content active={activeExpIndex === 0}>
-							<p>
-								I collaborated in an ECOM development team, helped develop many different microservice
-								applications using Spring Boot Framework (Java), front-end applications using React Js,
-								Redux and Material UI, maintained and developed databases using Microsoft Server Azure
-								SQL and MySQL that would in turn help fulfill clients needs.<br />
-								Using Agile, I’ve worked closely with clients to gather business requirements, created
-								and completed user stories, participated in daily stand-ups, and executed SDLC. Upon
-								joining the team I’ve collaborated in migrating legacy application that needed to be
-								changed from Struts technology to Spring Boot refactoring legacy code into a
-								maintainable, scalable code. <br />
-								Created many small Proof of Concept for other teams to help them find creative solutions
-								to their client’s needs.
-								<br />
-								<br />
-								<i>
-									<b>Focal points:</b>
-								</i>
-							</p>
-
-							<ul>
-								<li>Developed Microservices using Spring Boot Framework (Java).</li>
-								<li>Carefully created database designs using UML, ERDs.</li>
-								<li>Developed, managed and implemented Microsoft Server Azure SQL.</li>
-								<li>Participated in an agile development team.</li>
-								<li>Managed an offshore team for project development.</li>
-								<li>Developed CRUD applications using React Js, Redux, GraphQL, Material UI.</li>
-							</ul>
+							{summaryObject.workExperience.exp1.content()}
 						</Accordion.Content>
 					</Accordion>
 					<Accordion fluid styled>
