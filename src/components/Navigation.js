@@ -14,9 +14,6 @@ class Navigation extends Component {
 				<Menu.Item name="home" active={this.state.activeItem === 'home'} onClick={this.handleItemClick}>
 					Bio
 				</Menu.Item>
-				<Menu.Item name="about" active={this.state.activeItem === 'about'} onClick={this.handleItemClick}>
-					About
-				</Menu.Item>
 			</Menu>
 		);
 	}

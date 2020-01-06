@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
 	Card,
 	Icon,
@@ -15,8 +15,8 @@ import {
 } from 'semantic-ui-react';
 import Footer from './Footer';
 import avatarOne from '../assets/avatarOne.jpg';
-import { summaryStyle } from '../styles/summary-style';
-import { summaryObject } from '../utilities/summaryObject';
+import {summaryStyle} from '../styles/summary-style';
+import {summaryObject} from '../utilities/summaryObject';
 
 class Summary extends Component {
 	state = {
@@ -24,14 +24,14 @@ class Summary extends Component {
 	};
 
 	handleActiveProject = (e, project) => {
-		const { index } = project;
+		const {index} = project;
 
 		this.setState((prevState) => {
-			if (prevState.active !== index) return { activeExpIndex: index };
+			if (prevState.active !== index) return {activeExpIndex: index};
 		});
 	};
 	render() {
-		const { activeExpIndex } = this.state;
+		const {activeExpIndex} = this.state;
 		return (
 			<div>
 				<Container text textAlign='left' style={summaryStyle.container}>
@@ -56,7 +56,9 @@ class Summary extends Component {
 												<Popup
 													key={`pop-${index}`}
 													content={extra.content}
-													trigger={<Icon name={extra.icon} />}
+													trigger={<Icon style={{
+														padding: '0vh 15px 0vh 15px'
+													}} name={extra.icon} />}
 												/>
 											);
 										})}
@@ -64,12 +66,9 @@ class Summary extends Component {
 								</Card>
 							</Grid.Column>
 							<Grid.Column>
-								<Header content='About Me' style={{ padding: '5px', backgroundColor: '#bbded6' }} />
+								<Header content='About Me' style={{padding: '5px', backgroundColor: '#bbded6'}} />
 								<p>{summaryObject.aboutContent}</p>
-								<Header
-									content='Favorite Quote'
-									style={{ padding: '5px', backgroundColor: '#bbded6' }}
-								/>
+								<Header content='Favorite Quote' style={{padding: '5px', backgroundColor: '#bbded6'}} />
 								{summaryObject.favQuote()}
 							</Grid.Column>
 						</Grid.Row>
@@ -79,11 +78,39 @@ class Summary extends Component {
 					<Divider />
 				</Container>
 				<Container text style={summaryStyle.container}>
-					<Header content='Objective' style={{ padding: '5px', backgroundColor: '#bbded6' }} />
+					<Header content='Objective' style={{padding: '5px', backgroundColor: '#bbded6'}} />
 					<p>{summaryObject.objectiveContent}</p>
 				</Container>
+				<Container text style={summaryStyle.container}>
+					<Header content='Distinctive Characteristics' style={{padding: '5px', backgroundColor: '#bbded6'}} />
+					<Grid columns={2}>
+						{summaryObject.character.distinction.map((distinction, index) => {
+							return (
+								<Grid.Column key={`dist-${index}`}>
+									{/* title can go here */}
+									<Segment textAlign='center'>
+										<List>
+											{distinction.list.map((character, index) => {
+												return (
+													<List.Item key={`char-${index}`}>
+														<List.Content>{character}</List.Content>
+													</List.Item>
+												);
+											})}
+										</List>
+									</Segment>
+								</Grid.Column>
+							);
+						})}
+					</Grid>
+				</Container>
+				
+				<Container text style={summaryStyle.container}>
+					<Header content='Education' style={{padding: '5px', backgroundColor: '#bbded6'}} />
+					{summaryObject.education()}
+				</Container>
 				<Container text textAlign='left' style={summaryStyle.container}>
-					<Header content='Skills' style={{ padding: '5px', backgroundColor: '#bbded6' }} />
+					<Header content='Skills' style={{padding: '5px', backgroundColor: '#bbded6'}} />
 					<Header content='Proficient' as='h3' dividing textAlign='center' />
 					<Segment textAlign='center'>
 						<List horizontal>
@@ -131,7 +158,7 @@ class Summary extends Component {
 					</Segment>
 				</Container>
 				<Container text textAlign='left' style={summaryStyle.container}>
-					<Header content='Work Experience' style={{ padding: '5px', backgroundColor: '#bbded6' }} />
+					<Header content='Work Experience' style={{padding: '5px', backgroundColor: '#bbded6'}} />
 					<Accordion fluid styled>
 						<Accordion.Title active={activeExpIndex === 0} index={0} onClick={this.handleActiveProject}>
 							<Icon name='dropdown' />
@@ -144,14 +171,10 @@ class Summary extends Component {
 					<Accordion fluid styled>
 						<Accordion.Title active={activeExpIndex === 1} index={1} onClick={this.handleActiveProject}>
 							<Icon name='dropdown' />
-							Experience 2
+							{summaryObject.workExperience.exp2.companyName}
 						</Accordion.Title>
 						<Accordion.Content active={activeExpIndex === 1}>
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel beatae maxime eveniet
-								aspernatur esse modi id tempore, et officiis, dolorem, cum molestiae! Aspernatur
-								explicabo atque minus. Eos velit nesciunt quasi?
-							</p>
+							{summaryObject.workExperience.exp2.content()}
 						</Accordion.Content>
 					</Accordion>
 					<Accordion fluid styled>
