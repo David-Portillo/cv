@@ -1,0 +1,14 @@
+@font-face {
+  font-family: Elena-Regular;
+  src: url('../fonts/ElenaWebRegular.woff2') format('woff');
+}
+
+@font-face {
+  font-family: Elena-Bold;
+  src: url('../fonts/ElenaWebBold.woff2') format('woff');
+}
+
+@font-face {
+  font-family: Elena-Italic;
+  src: url('../fonts/ElenaWebRegularItalic.woff2') format('woff');
+}

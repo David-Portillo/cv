@@ -1,0 +1,18 @@
+
+body {
+  font-family: Elena-Italic;
+  margin: 0;
+  padding: 0;
+}
+
+.container div {
+  background-color: darksalmon;
+}
+
+.main div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightseagreen;
+}
+
