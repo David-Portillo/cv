@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "KaushanScript";
+  src: url("./assets/KaushanScript-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "KiteOne";
+  src: url("./assets/KiteOne-Regular.ttf") format("truetype");
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgba(5, 5, 5, 0.908);
+}
+
+nav {
+  padding: 20px 5px;
+  display: block;
+  width: 100%;
+  background-color: rgba(44, 41, 41, 0.989);
+}
+
+nav section {
+  display: block;
+  font-family: "KaushanScript";
+  overflow: hidden;
+  color: darkgoldenrod;
+  border-right: 0.4em solid darkgoldenrod;
+  white-space: nowrap;
+  animation: typing 0.5s steps(17, end) forwards, blinking 1.2s infinite;
+  font-size: 1.8rem;
+  width: 0;
+}
+
+section:nth-child(1) {
+  font-family: "KaushanScript";
+  font-size: 30px;
+  color: darkgoldenrod;
+}
+
+section:nth-child(2) {
+  font-family: "KaushanScript";
+  font-size: 36px;
+  color: rgba(210, 208, 207, 0.922);
+}
+
+section:nth-child(3) {
+  font-family: "KiteOne";
+  font-size: 20px;
+  color: rgba(153, 152, 151, 0.905);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 175px;
+  }
+}
+
+@keyframes blinking {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: darkgoldenrod;
+  }
+}
+
+footer section {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background-color: rgba(44, 41, 41, 0.989);
+}
