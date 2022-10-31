@@ -1,10 +1,14 @@
 @font-face {
   font-family: "KaushanScript";
-  src: url("./assets/KaushanScript-Regular.ttf") format("truetype");
+  src: url("./assets/fonts/KaushanScript-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "KiteOne";
-  src: url("./assets/KiteOne-Regular.ttf") format("truetype");
+  src: url("./assets/fonts/KiteOne-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "TitanOne";
+  src: url("./assets/fonts/TitanOne-Regular.ttf") format("truetype");
 }
 
 body {
@@ -13,16 +17,27 @@ body {
   background-color: rgba(5, 5, 5, 0.908);
 }
 
-nav {
+/* nav {
   padding: 20px 5px;
   display: block;
   width: 100%;
   background-color: rgba(44, 41, 41, 0.989);
+} */
+
+nav {
+  padding: 0px 30px;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* width: 100%; */
+  background-color: rgba(44, 41, 41, 0.989);
 }
 
-nav section {
+/* nav section {
   display: block;
-  font-family: "KaushanScript";
+  font-family: "TitanOne";
   overflow: hidden;
   color: darkgoldenrod;
   border-right: 0.4em solid darkgoldenrod;
@@ -30,12 +45,21 @@ nav section {
   animation: typing 0.5s steps(17, end) forwards, blinking 1.2s infinite;
   font-size: 1.8rem;
   width: 0;
-}
+} */
 
 section:nth-child(1) {
-  font-family: "KaushanScript";
+  font-family: "TitanOne";
   font-size: 30px;
   color: darkgoldenrod;
+}
+
+.name {
+  background-image: linear-gradient(-45deg, #76bcc8, #f4978e, #3a6e9f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient 10s ease infinite;
+  background-size: 400% 400%;
 }
 
 section:nth-child(2) {
@@ -50,12 +74,25 @@ section:nth-child(3) {
   color: rgba(153, 152, 151, 0.905);
 }
 
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 @keyframes typing {
   from {
     width: 0;
   }
   to {
-    width: 175px;
+    width: 229px;
   }
 }
 
