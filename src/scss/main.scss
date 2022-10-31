@@ -1,4 +1,7 @@
-$red: lightblue;
+$default_background_color: rgba(5, 5, 5, 0.908);
+
 body {
-  background-color: $red;
+  padding: 0;
+  margin: 0;
+  background-color: $default_background_color;
 }
