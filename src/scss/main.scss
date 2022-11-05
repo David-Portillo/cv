@@ -16,12 +16,11 @@ body {
 }
 
 .header {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  display: flex;
+  width: 100vw;
   padding: 15px 30px;
+  align-items: center;
+  justify-content: space-between;
   background-color: $default_nav_background_color;
 
   .branding,
@@ -31,8 +30,16 @@ body {
     color: transparent;
     background-clip: text;
     background-image: linear-gradient(-45deg, #76bcc8, #f4978e, #3a6e9f);
+    animation: gradient-branding 13s ease infinite;
+    background-size: 400% 400%;
     -webkit-background-clip: text;
-    animation: gradient-branding 12s ease infinite;
+  }
+
+  .menu {
+    width: 45px;
+    height: 45px;
+    background-image: linear-gradient(-45deg, #76bcc8, #f4978e, #3a6e9f);
+    animation: gradient-branding 13s ease infinite;
     background-size: 400% 400%;
   }
 }
