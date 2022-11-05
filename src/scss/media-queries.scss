@@ -1,0 +1,17 @@
+@media screen and (max-width: 450px) {
+  .branding {
+    display: none;
+  }
+  .branding-shorten {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .branding {
+    display: block;
+  }
+  .branding-shorten {
+    display: none;
+  }
+}
