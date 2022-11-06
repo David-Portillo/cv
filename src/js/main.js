@@ -1,5 +1,3 @@
-//TODO: capture screen dimensions provided in chrome as constants
-
 const fullname = "David Portillo.";
 const abbreviatedName = "DP.";
 const mobileScreenWidth = 550;
