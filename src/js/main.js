@@ -15,3 +15,7 @@ function changeBrandingName() {
 window.addEventListener("load", () => {
   changeBrandingName();
 });
+
+window.addEventListener("resize", () => {
+  changeBrandingName();
+});
