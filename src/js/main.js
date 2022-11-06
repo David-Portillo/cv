@@ -28,7 +28,12 @@ function updateBrandingStyle(screen) {
 // });
 
 window.addEventListener("load", (e) => {
-  // updateBrandingStyle(e);
+  if (window.innerWidth <= 550) {
+    // branding.style.opacity = "0";
+    branding.innerText = "DP.";
+  } else {
+    branding.innerText = "David Portillo.";
+  }
 });
 
 window.addEventListener("resize", () => {
