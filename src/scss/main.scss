@@ -1,5 +1,4 @@
 @import "./keyframes.scss";
-@import "./media-queries.scss";
 
 @font-face {
   font-family: "TitanOne";
@@ -28,9 +27,11 @@ body {
     font-family: "TitanOne";
     color: transparent;
     background-clip: text;
+    white-space: nowrap;
     background-image: linear-gradient(-45deg, #2a9d8f, #e9c46a, #f4a261);
     animation: gradient-branding 13s ease infinite;
     background-size: 400% 400%;
+    transition: all 0.5s ease;
     -webkit-background-clip: text;
   }
 
@@ -38,6 +39,7 @@ body {
     width: 45px;
     height: 45px;
     display: flex;
+    min-width: 45px;
     border-radius: 2px;
     align-items: center;
     justify-content: center;
