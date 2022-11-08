@@ -1,21 +1,31 @@
-@import "./keyframes.scss";
-
 @font-face {
   font-family: "TitanOne";
   src: url("../assets/fonts/TitanOne-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PT Serif";
+  src: url("../assets/fonts/PTSerif-Bold.ttf") format("truetype");
+}
+
 $default_background_color: rgba(5, 5, 5, 0.908);
 $default_nav_background_color: rgba(44, 41, 41, 0.989);
+$default_content_title_font_color: #fcfcfc;
+$default_text_content_font_color: #f9f5ec;
 
 body {
   padding: 0;
   margin: 0;
-  min-width: 250px;
+  min-width: 350px;
   background-color: $default_background_color;
 }
 
-.header {
+nav {
   display: flex;
   padding: 15px 30px;
   align-items: center;
@@ -59,3 +69,46 @@ body {
     }
   }
 }
+
+main {
+  padding: 15px 30px;
+  .headline {
+    font-family: "PT Serif";
+    color: $default_content_title_font_color;
+  }
+
+  .text-content {
+    font-family: "Montserrat";
+    color: $default_text_content_font_color;
+  }
+}
+
+main .grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "photo"
+    "about";
+
+  .about-grid-area {
+    grid-area: about;
+    padding: 1em;
+  }
+
+  .photo-grid-area {
+    grid-area: photo;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .photo-img img {
+      width: 16em;
+      border-radius: 10px;
+    }
+  }
+}
+
+@import "./media-queries.scss";
+@import "./keyframes.scss";

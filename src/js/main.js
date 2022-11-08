@@ -1,12 +1,11 @@
-const fullname = "David Portillo.";
-const abbreviatedName = "DP.";
-const mobileScreenWidth = 550;
-
 const brandingEl = document.getElementById("branding");
 
 function changeBrandingName() {
-  brandingEl.style.transform = "translate(-500px)";
+  const fullname = "David Portillo.";
+  const abbreviatedName = "DP.";
+  const mobileScreenWidth = 550;
 
+  brandingEl.style.transform = "translate(-500px)";
   const resetBrandingPosition = () =>
     (brandingEl.style.transform = "translate(0px)");
 
@@ -19,7 +18,7 @@ function changeBrandingName() {
       resetBrandingPosition();
     }
     clearInterval(interval);
-  }, 500);
+  }, 300);
 }
 
 // event Listeners
