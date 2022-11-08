@@ -74,11 +74,14 @@ main {
   padding: 15px 30px;
   .headline {
     font-family: "PT Serif";
+    font-size: 2em;
     color: $default_content_title_font_color;
   }
 
   .text-content {
     font-family: "Montserrat";
+    font-size: 1.1em;
+    line-height: 1.5em;
     color: $default_text_content_font_color;
   }
 }
@@ -104,7 +107,7 @@ main .grid-container {
     align-items: center;
 
     .photo-img img {
-      width: 16em;
+      width: 13em;
       border-radius: 10px;
     }
   }
