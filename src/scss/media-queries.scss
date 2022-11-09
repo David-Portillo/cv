@@ -4,3 +4,9 @@
     grid-template-areas: "about photo";
   }
 }
+
+@media only screen and (min-width: 800px) {
+  main .grid-container .photo-grid-area .photo-img img {
+    width: 20em;
+  }
+}

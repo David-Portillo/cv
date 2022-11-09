@@ -15,7 +15,6 @@
 
 $default_background_color: rgba(5, 5, 5, 0.908);
 $default_nav_background_color: rgba(44, 41, 41, 0.989);
-$default_content_title_font_color: #fcfcfc;
 $default_text_content_font_color: #f9f5ec;
 
 body {
@@ -39,7 +38,7 @@ nav {
     background-clip: text;
     white-space: nowrap;
     background-image: linear-gradient(-45deg, #2a9d8f, #e9c46a, #f4a261);
-    animation: gradient-branding 13s ease infinite;
+    animation: gradient-text 13s ease infinite;
     background-size: 400% 400%;
     transition: all 0.5s ease;
     -webkit-background-clip: text;
@@ -55,7 +54,7 @@ nav {
     justify-content: center;
     background-size: 400% 400%;
     background-image: linear-gradient(-45deg, #2a9d8f, #e9c46a, #f4a261);
-    animation: gradient-branding 13s ease infinite;
+    animation: gradient-text 13s ease infinite;
 
     .menu-lines {
       width: 25px;
@@ -73,14 +72,21 @@ nav {
 main {
   padding: 15px 30px;
   .headline {
-    font-family: "PT Serif";
-    font-size: 2em;
-    color: $default_content_title_font_color;
+    font-family: "TitanOne";
+    font-size: 1.6em;
+    line-height: 1.7em;
+    color: transparent;
+    background-image: linear-gradient(-45deg, #2a9d8f, #e9c46a, #f4a261);
+    animation: gradient-text 13s ease infinite;
+    background-size: 400% 400%;
+    transition: all 0.5s ease;
+    background-clip: text;
+    -webkit-background-clip: text;
   }
 
   .text-content {
     font-family: "Montserrat";
-    font-size: 1.1em;
+    font-size: 1em;
     line-height: 1.5em;
     color: $default_text_content_font_color;
   }
@@ -109,6 +115,9 @@ main .grid-container {
     .photo-img img {
       width: 13em;
       border-radius: 10px;
+      border: 1px solid white;
+
+      filter: opacity(0.8) grayscale(1);
     }
   }
 }
