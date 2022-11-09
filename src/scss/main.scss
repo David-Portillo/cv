@@ -47,7 +47,7 @@ nav {
   .menu {
     width: 45px;
     height: 45px;
-    display: flex;
+    display: none;
     min-width: 45px;
     border-radius: 2px;
     align-items: center;
@@ -70,7 +70,7 @@ nav {
 }
 
 main {
-  padding: 15px 30px;
+  margin: 50px 18px;
   .headline {
     font-family: "TitanOne";
     font-size: 1.6em;
@@ -116,7 +116,6 @@ main .grid-container {
       width: 13em;
       border-radius: 10px;
       border: 1px solid white;
-
       filter: opacity(0.8) grayscale(1);
     }
   }
