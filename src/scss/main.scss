@@ -9,11 +9,6 @@
 }
 
 @font-face {
-  font-family: "PT Serif";
-  src: url("../assets/fonts/PTSerif-Bold.ttf") format("truetype");
-}
-
-@font-face {
   font-family: "Quicksand";
   src: url("../assets/fonts//Quicksand.ttf") format("truetype");
 }
@@ -25,34 +20,38 @@ $default_text_content_font_color: #f9f5ec;
 body {
   padding: 0;
   margin: 0;
-  min-width: 350px;
   background-color: $default_background_color;
 }
 
 nav {
-  display: flex;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  position: fixed;
   padding: 15px 30px;
   align-items: center;
+  background-size: 150% 150%;
   justify-content: space-between;
   background-color: $default_nav_background_color;
 
   .branding {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    height: 50px;
     width: 50px;
+    height: 50px;
     padding: 5px;
-    font-family: "TitanOne";
+    display: flex;
+    font-size: 30px;
     color: transparent;
-    background-clip: text;
+    align-items: center;
     white-space: nowrap;
-    background-image: linear-gradient(-45deg, #2a9d8f, #e9c46a, #f4a261);
-    animation: gradient-text 13s ease infinite;
-    background-size: 400% 400%;
+    background-clip: text;
+    justify-content: center;
+    font-family: "TitanOne";
     transition: all 0.5s ease;
+    background-size: 400% 400%;
     -webkit-background-clip: text;
+    animation: gradient-text 13s ease infinite;
+    background-image: linear-gradient(-45deg, #2a9d8f, #e9c46a, #f4a261);
 
     border-radius: 50%;
     border: 5px solid;
@@ -72,7 +71,6 @@ nav {
     justify-content: center;
     background-size: 400% 400%;
     background-image: linear-gradient(-45deg, #2a9d8f, #e9c46a, #f4a261);
-    animation: gradient-text 13s ease infinite;
 
     .menu-lines {
       width: 25px;
@@ -88,11 +86,6 @@ nav {
 }
 
 main {
-  // display: flex;
-  // flex-direction: column;
-  // margin: 50px 18px;
-  // justify-content: center;
-
   .text-focus,
   .text-content {
     font-family: "Quicksand";
@@ -106,10 +99,6 @@ main {
   }
 }
 
-// main section {
-//   max-width: 85vw;
-// }
-
 main .grid-container {
   display: grid;
 
@@ -122,14 +111,12 @@ main .grid-container {
   .hero-banner-grid-area {
     font-size: 3.5em;
     font-family: "TitanOne";
-    // color: $default_text_content_font_color;
     display: flex;
     height: 100vh;
     grid-area: hero;
     text-align: center;
     align-items: center;
     justify-content: center;
-    // background-color: cadetblue;
     background-image: linear-gradient(-45deg, #2a9d8f, #e9c46a, #f4a261);
   }
 
