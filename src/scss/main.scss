@@ -112,11 +112,19 @@ main .grid-container {
     justify-content: center;
     align-items: center;
 
-    .photo-img img {
-      width: 13em;
-      border-radius: 10px;
+    .photo-img {
+      display: block;
+      width: 150px;
+      height: 150px;
+      background-image: url("../assets/images/photo-opt2.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
       border: 1px solid white;
       filter: opacity(0.8) grayscale(1);
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
     }
   }
 }
