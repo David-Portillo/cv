@@ -14,8 +14,29 @@
 }
 
 $default_background_color: rgba(5, 5, 5, 0.908);
-$default_nav_background_color: rgba(44, 41, 41, 0.989);
+$default_nav_background_color: rgba(44, 41, 41, 0.988);
 $default_text_content_font_color: #f9f5ec;
+
+// works on FireFox
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2c2929fc black;
+}
+
+// Works on Chrome, Edge, and Safari
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: black;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #2c2929fc;
+  border-radius: 20px;
+  border: 1px solid black;
+}
 
 body {
   padding: 0;
