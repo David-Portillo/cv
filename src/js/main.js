@@ -1,8 +1,8 @@
 const brandingEl = document.getElementById("branding");
 
 function changeBrandingName() {
-  const fullname = "David Portillo.";
-  const abbreviatedName = "DP.";
+  const fullname = "DP";
+  const abbreviatedName = "DP";
   const mobileScreenWidth = 550;
 
   if (window.innerWidth <= mobileScreenWidth) {

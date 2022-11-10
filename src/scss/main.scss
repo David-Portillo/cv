@@ -37,7 +37,13 @@ nav {
   background-color: $default_nav_background_color;
 
   .branding {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 30px;
+    height: 50px;
+    width: 50px;
+    padding: 5px;
     font-family: "TitanOne";
     color: transparent;
     background-clip: text;
@@ -47,6 +53,13 @@ nav {
     background-size: 400% 400%;
     transition: all 0.5s ease;
     -webkit-background-clip: text;
+
+    border-radius: 50%;
+    border: 5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(-45deg, #2a9d8f, #e9c46a, #f4a261);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
   }
 
   .menu {
@@ -75,9 +88,10 @@ nav {
 }
 
 main {
-  display: flex;
-  margin: 50px 18px;
-  justify-content: center;
+  // display: flex;
+  // flex-direction: column;
+  // margin: 50px 18px;
+  // justify-content: center;
 
   .text-focus,
   .text-content {
@@ -92,17 +106,32 @@ main {
   }
 }
 
-main section {
-  max-width: 85vw;
-}
+// main section {
+//   max-width: 85vw;
+// }
 
 main .grid-container {
   display: grid;
-  gap: 10px;
+
   grid-template-columns: 1fr;
   grid-template-areas:
+    "hero"
     "photo"
     "about";
+
+  .hero-banner-grid-area {
+    font-size: 3.5em;
+    font-family: "TitanOne";
+    // color: $default_text_content_font_color;
+    display: flex;
+    height: 100vh;
+    grid-area: hero;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    // background-color: cadetblue;
+    background-image: linear-gradient(-45deg, #2a9d8f, #e9c46a, #f4a261);
+  }
 
   .about-grid-area {
     grid-area: about;
@@ -124,7 +153,6 @@ main .grid-container {
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      // border: 1px solid white;
       filter: opacity(0.8) grayscale(1);
       border-radius: 50%;
       -webkit-border-radius: 50%;
