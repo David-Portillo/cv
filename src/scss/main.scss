@@ -13,6 +13,11 @@
   src: url("../assets/fonts/PTSerif-Bold.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Quicksand";
+  src: url("../assets/fonts//Quicksand.ttf") format("truetype");
+}
+
 $default_background_color: rgba(5, 5, 5, 0.908);
 $default_nav_background_color: rgba(44, 41, 41, 0.989);
 $default_text_content_font_color: #f9f5ec;
@@ -70,26 +75,25 @@ nav {
 }
 
 main {
+  display: flex;
   margin: 50px 18px;
-  .headline {
-    font-family: "TitanOne";
-    font-size: 1.6em;
-    line-height: 1.7em;
-    color: transparent;
-    background-image: linear-gradient(-45deg, #2a9d8f, #e9c46a, #f4a261);
-    animation: gradient-text 13s ease infinite;
-    background-size: 400% 400%;
-    transition: all 0.5s ease;
-    background-clip: text;
-    -webkit-background-clip: text;
-  }
+  justify-content: center;
 
+  .text-focus,
   .text-content {
-    font-family: "Montserrat";
+    font-family: "Quicksand";
     font-size: 1em;
     line-height: 1.5em;
     color: $default_text_content_font_color;
   }
+
+  .text-focus {
+    font-weight: bolder;
+  }
+}
+
+main section {
+  max-width: 85vw;
 }
 
 main .grid-container {
