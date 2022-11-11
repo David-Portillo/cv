@@ -127,7 +127,10 @@ main .grid-container {
   grid-template-areas:
     "hero"
     "photo"
-    "about";
+    "about"
+    "skill-cat-1"
+    "skill-cat-2"
+    "skill-cat-3";
 
   .hero-banner-grid-area {
     font-size: 3.5em;
@@ -144,13 +147,16 @@ main .grid-container {
   .about-grid-area {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     grid-area: about;
     padding: 1em;
+    height: 30vh;
+    text-align: center;
   }
 
   .photo-grid-area {
     grid-area: photo;
+    height: 30vh;
     padding: 1em;
     display: flex;
     justify-content: center;
@@ -169,6 +175,28 @@ main .grid-container {
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
     }
+  }
+
+  .skill-grid-area-1 {
+    grid-area: skill-cat-1;
+    background-color: #f4a261;
+  }
+  .skill-grid-area-2 {
+    grid-area: skill-cat-2;
+    background-color: #f4a261;
+  }
+  .skill-grid-area-3 {
+    grid-area: skill-cat-3;
+    background-color: #f4a261;
+  }
+
+  .skill-grid-area-1,
+  .skill-grid-area-2,
+  .skill-grid-area-3 {
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    height: 50vh;
   }
 }
 
