@@ -180,14 +180,32 @@ main .grid-container {
   .skill-grid-area-1 {
     grid-area: skill-cat-1;
     background-color: #f4a261;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "TitanOne";
+    font-size: 1.2em;
+    color: black;
   }
   .skill-grid-area-2 {
     grid-area: skill-cat-2;
     background-color: #f4a261;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "TitanOne";
+    font-size: 1.2em;
+    color: black;
   }
   .skill-grid-area-3 {
     grid-area: skill-cat-3;
     background-color: #f4a261;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "TitanOne";
+    font-size: 1.2em;
+    color: black;
   }
 
   .skill-grid-area-1,
