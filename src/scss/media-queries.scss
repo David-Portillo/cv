@@ -18,3 +18,15 @@
     height: 250px;
   }
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .skill-html-animation {
+    animation: fill-html-skill 1s 1;
+  }
+  .skill-javascript-animation {
+    animation: fill-javascript-skill 1s 1;
+  }
+  .skill-css-animation {
+    animation: fill-css-skill 1s 1;
+  }
+}
