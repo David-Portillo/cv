@@ -41,6 +41,7 @@ $default_text_content_font_color: #f9f5ec;
 body {
   padding: 0;
   margin: 0;
+  min-width: 280px;
   background-color: $default_background_color;
 }
 
@@ -164,8 +165,8 @@ main .grid-container {
 
     .photo-img {
       display: block;
-      width: 280px;
-      height: 280px;
+      width: 180px;
+      height: 180px;
       background-image: url("../assets/images/photo-opt2.jpg");
       background-size: cover;
       background-repeat: no-repeat;
@@ -187,9 +188,7 @@ main .grid-container {
     grid-area: skill-cat-3;
   }
 
-  .skill-grid-area-1,
-  .skill-grid-area-2,
-  .skill-grid-area-3 {
+  [class^="skill-grid-area"] {
     font-family: "TitanOne";
     background-color: #f4a261;
     padding: 1em;
@@ -204,26 +203,24 @@ main .grid-container {
       justify-content: space-between;
       align-items: center;
 
-      .skill-wrapper {
+      .skill-container {
         width: 100px;
         background-color: #f88c33aa;
         margin-left: 10px;
         height: 10px;
 
-        .html,
-        .javascript,
-        .css {
+        .skill-bar {
           height: 10px;
           background-color: black;
         }
 
-        .html {
+        .skill-html {
           width: 70%;
         }
-        .javascript {
+        .skill-js {
           width: 89%;
         }
-        .css {
+        .skill-css {
           width: 60%;
         }
       }
