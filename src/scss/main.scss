@@ -164,8 +164,8 @@ main .grid-container {
 
     .photo-img {
       display: block;
-      width: 150px;
-      height: 150px;
+      width: 280px;
+      height: 280px;
       background-image: url("../assets/images/photo-opt2.jpg");
       background-size: cover;
       background-repeat: no-repeat;
@@ -179,42 +179,55 @@ main .grid-container {
 
   .skill-grid-area-1 {
     grid-area: skill-cat-1;
-    background-color: #f4a261;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "TitanOne";
-    font-size: 1.2em;
-    color: black;
   }
   .skill-grid-area-2 {
     grid-area: skill-cat-2;
-    background-color: #f4a261;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "TitanOne";
-    font-size: 1.2em;
-    color: black;
   }
   .skill-grid-area-3 {
     grid-area: skill-cat-3;
-    background-color: #f4a261;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "TitanOne";
-    font-size: 1.2em;
-    color: black;
   }
 
   .skill-grid-area-1,
   .skill-grid-area-2,
   .skill-grid-area-3 {
+    font-family: "TitanOne";
+    background-color: #f4a261;
     padding: 1em;
     display: flex;
     justify-content: center;
     height: 50vh;
+    font-size: 1.2em;
+    color: black;
+    flex-direction: column;
+    & > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .skill-container {
+        width: 100px;
+        background-color: #f88c33aa;
+        margin-left: 10px;
+        height: 10px;
+
+        .html,
+        .javascript,
+        .css {
+          height: 10px;
+          background-color: black;
+        }
+
+        .html {
+          width: 70%;
+        }
+        .javascript {
+          width: 89%;
+        }
+        .css {
+          width: 60%;
+        }
+      }
+    }
   }
 }
 
