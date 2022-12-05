@@ -4,11 +4,6 @@
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat.ttf") format("truetype");
-}
-
-@font-face {
   font-family: "Quicksand";
   src: url("../assets/fonts//Quicksand.ttf") format("truetype");
 }
@@ -17,27 +12,6 @@ $default_background_color: rgba(5, 5, 5, 0.908);
 $default_nav_background_color: rgba(44, 41, 41, 0.988);
 $default_text_content_font_color: #f9f5ec;
 
-// works on FireFox
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #2c2929fc black;
-}
-
-// Works on Chrome, Edge, and Safari
-*::-webkit-scrollbar {
-  width: 12px;
-}
-
-*::-webkit-scrollbar-track {
-  background: black;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: #2c2929fc;
-  border-radius: 20px;
-  border: 1px solid black;
-}
-
 body {
   padding: 0;
   margin: 0;
@@ -45,83 +19,28 @@ body {
   background-color: $default_background_color;
 }
 
-nav {
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100vw;
-  position: fixed;
-  padding: 15px 30px;
-  align-items: center;
-  background-size: 150% 150%;
-  justify-content: space-between;
-  background-color: $default_nav_background_color;
-
-  .branding {
-    width: 50px;
-    height: 50px;
-    padding: 5px;
-    display: flex;
-    font-size: 30px;
-    color: transparent;
-    align-items: center;
-    white-space: nowrap;
-    background-clip: text;
-    justify-content: center;
-    font-family: "TitanOne";
-    transition: all 0.5s ease;
-    background-size: 400% 400%;
-    -webkit-background-clip: text;
-    animation: gradient-text 13s ease infinite;
-    background-image: linear-gradient(-45deg, #2a9d8f, #e9c46a, #f4a261);
-
-    border-radius: 50%;
-    border: 5px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(-45deg, #2a9d8f, #e9c46a, #f4a261);
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-  }
-
-  .menu {
-    width: 45px;
-    height: 45px;
-    display: none;
-    min-width: 45px;
-    border-radius: 2px;
-    align-items: center;
-    justify-content: center;
-    background-size: 400% 400%;
-    background-image: linear-gradient(-45deg, #2a9d8f, #e9c46a, #f4a261);
-
-    .menu-lines {
-      width: 25px;
-      height: 25px;
-      padding: 1px;
-
-      .menu-line {
-        stroke: rgb(29, 28, 28);
-        stroke-width: 2.5px;
-      }
-    }
-  }
+.text-content {
+  font-family: "Quicksand";
+  font-size: 1em;
+  line-height: 1.5em;
+  color: $default_text_content_font_color;
 }
 
-main {
-  .text-focus,
-  .text-content {
-    font-family: "Quicksand";
-    font-size: 1em;
-    line-height: 1.5em;
-    color: $default_text_content_font_color;
-  }
-
-  .text-focus {
-    font-weight: bolder;
-  }
+.text-focus {
+  font-weight: bolder;
 }
 
-main .grid-container {
+.skill-grid-area-1 {
+  grid-area: skill-cat-1;
+}
+.skill-grid-area-2 {
+  grid-area: skill-cat-2;
+}
+.skill-grid-area-3 {
+  grid-area: skill-cat-3;
+}
+
+.grid-container {
   display: grid;
 
   grid-template-columns: 1fr;
@@ -177,56 +96,4 @@ main .grid-container {
       -moz-border-radius: 50%;
     }
   }
-
-  .skill-grid-area-1 {
-    grid-area: skill-cat-1;
-  }
-  .skill-grid-area-2 {
-    grid-area: skill-cat-2;
-  }
-  .skill-grid-area-3 {
-    grid-area: skill-cat-3;
-  }
-
-  [class^="skill-grid-area"] {
-    font-family: "TitanOne";
-    background-color: #f4a261;
-    padding: 1em;
-    display: flex;
-    justify-content: center;
-    height: 50vh;
-    font-size: 1.2em;
-    color: black;
-    flex-direction: column;
-    & > div {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      .skill-container {
-        width: 100px;
-        background-color: #f88c33aa;
-        margin-left: 10px;
-        height: 10px;
-
-        .skill-bar {
-          height: 10px;
-          background-color: black;
-        }
-
-        .skill-html {
-          width: 70%;
-        }
-        .skill-js {
-          width: 89%;
-        }
-        .skill-css {
-          width: 60%;
-        }
-      }
-    }
-  }
 }
-
-@import "./media-queries.scss";
-@import "./keyframes.scss";

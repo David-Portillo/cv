@@ -18,15 +18,3 @@
     height: 250px;
   }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .skill-html-animation {
-    animation: animate-html-skill 1s 1;
-  }
-  .skill-js-animation {
-    animation: animate-js-skill 1s 1;
-  }
-  .skill-css-animation {
-    animation: animate-css-skill 1s 1;
-  }
-}
