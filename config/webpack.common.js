@@ -1,4 +1,6 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   entry: ["regenerator-runtime/runtime.js", "./src/index.tsx"],
   resolve: {
@@ -21,13 +23,9 @@ module.exports = {
         use: [
           {
             loader: "file-loader",
-            options: { outputPath: "assets/" },
+            options: { outputPath: "assets/images/" },
           },
         ],
-      },
-      {
-        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-        use: ["url-loader", "file-loader"],
       },
       {
         test: /\.css$/,
@@ -47,4 +45,14 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      // favicon: "./src/assets/favicon.png",
+      hash: true,
+      title: "Portfolio",
+      template: "./public/index.html",
+    }),
+
+    new MiniCssExtractPlugin(),
+  ],
 };
