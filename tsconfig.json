@@ -16,6 +16,6 @@
     "strictNullChecks": false,
     "sourceMap": true
   },
-  "include": ["src", "decs.d.ts"],
-  "exclude": ["./node_modules", "./build", "./dist", "./src/__tests__"]
+  "include": ["src"],
+  "exclude": ["./node_modules", "./build", "./src/__tests__"]
 }
