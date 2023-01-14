@@ -6,7 +6,6 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "copyright contact social";
-  height: 100px;
   padding: 10px;
   font-size: 0.9em;
   background-color: $elegant_darker_blue;
