@@ -16,14 +16,14 @@ footer {
 .copyright {
   grid-area: copyright;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 .contact {
   grid-area: contact;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -35,6 +35,6 @@ footer {
 }
 
 .social img {
-  margin: 5px;
+  margin: 16px;
   width: 35px;
 }
