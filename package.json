@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx serve -s build",
-    "prebuild": "npx rimraf build",
+    "start": "npx serve -s dist",
+    "prebuild": "npx rimraf dist",
     "dev": "npx cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
     "build": "npx cross-env NODE_ENV=production webpack --config config/webpack.prod.js"
   },

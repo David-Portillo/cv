@@ -11,3 +11,8 @@
   font-family: "Montserrat";
   color: $faded_white;
 }
+
+.oulined-text {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1em;
+}

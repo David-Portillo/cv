@@ -1,4 +1,3 @@
-const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
@@ -19,25 +18,13 @@ module.exports = {
         use: ["babel-loader", "ts-loader"],
       },
       {
-        test: /\.(jp?g|png|gif|ico)$/i,
+        test: /\.(jp?g|png|gif|ico|svg)$/i,
         use: [
           {
             loader: "file-loader",
             options: { outputPath: "assets/images/" },
           },
         ],
-      },
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: "url-loader",
-            options: {
-              sourceMap: true,
-            },
-          },
-        ],
-        include: [path.join(__dirname, "src"), /node_modules/],
       },
       {
         test: /\.(s(a|c)ss)$/,
