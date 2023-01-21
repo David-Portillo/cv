@@ -8,8 +8,11 @@ footer {
   grid-template-areas: "copyright contact social";
   padding: 10px;
   font-size: 0.9em;
-  background-color: $elegant_darker_blue;
   border-top: $elegant_blue_border;
+
+  background-image: url("./assets/images/blue-grainy.svg");
+  background-size: cover;
+  background-position: center;
 }
 
 .copyright {
