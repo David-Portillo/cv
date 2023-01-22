@@ -3,3 +3,28 @@ body {
   padding: 0;
   background-color: $elegant_blue;
 }
+
+// scrollbars
+
+// works on Firefox
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $elegant_darker_blue $elegant_blue;
+}
+
+// works on Chrome, Edge, and Safari
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: $elegant_darker_blue;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $elegant_blue;
+  border-radius: 20px;
+  border: 1px solid $elegant_blue_border;
+}
