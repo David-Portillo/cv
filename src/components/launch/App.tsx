@@ -7,7 +7,9 @@ const App = (): JSX.Element => {
   return (
     <React.Fragment>
       <Header />
-      <Introduction />
+      <div className='grid-content'>
+        <Introduction />
+      </div>
       <Footer />
     </React.Fragment>
   );
