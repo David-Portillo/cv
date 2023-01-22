@@ -3,7 +3,6 @@ import React from "react";
 const Introduction = (): JSX.Element => {
   return (
     <React.Fragment>
-      {/* TODO: remove style when image is ready, re-utilize properies is scss if necessary */}
       <div className='photo-grid-area'>
         <div className='photo'>IMAGE</div>
         <div className='assortment'>
