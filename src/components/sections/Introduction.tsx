@@ -4,32 +4,12 @@ const Introduction = (): JSX.Element => {
   return (
     <React.Fragment>
       {/* TODO: remove style when image is ready, re-utilize properies is scss if necessary */}
-      <div className='photo-grid-area' style={{ flexDirection: "column" }}>
-        <div
-          style={{
-            height: "250px",
-            width: "250px",
-            backgroundColor: "gray",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            borderRadius: "50%",
-          }}
-        >
-          IMAGE
-        </div>
-        <div
-          className='intrigue-assortment'
-          style={{
-            display: "flex",
-            backgroundColor: "wheat",
-            width: "100%",
-            justifyContent: "space-evenly",
-          }}
-        >
-          <div style={{ padding: "10px" }}>ICON</div>
-          <div style={{ padding: "10px" }}>ICON</div>
-          <div style={{ padding: "10px" }}>ICON</div>
+      <div className='photo-grid-area'>
+        <div className='photo'>IMAGE</div>
+        <div className='assortment'>
+          <div>ICON</div>
+          <div>ICON</div>
+          <div>ICON</div>
         </div>
       </div>
       <div className='intro-grid-area'>
