@@ -1,5 +1,21 @@
-.section-container {
+.grid-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "photo intro intro";
   margin: 15px;
+}
+
+.photo-grid-area {
+  margin: 15px;
+  grid-area: photo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-grid-area {
+  margin: 15px;
+  grid-area: intro;
 }
 
 .text {
@@ -10,6 +26,18 @@
 .faded-text {
   font-family: "Montserrat";
   color: $faded_white;
+}
+
+.paragraph-title {
+  font-family: "Montserrat";
+  color: $cream_wheat;
+}
+
+.faded-paragraph {
+  font-family: "Montserrat";
+  line-height: 1.7em;
+  font-size: 1.2em;
+  color: $faded_cream_wheat;
 }
 
 .oulined-text {
