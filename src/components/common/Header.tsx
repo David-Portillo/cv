@@ -1,5 +1,5 @@
 import React from "react";
-import BrandingLogo from "../../styles/assets/images/branding.svg";
+import BrandingLogo from "../../assets/images/branding.svg";
 
 const Header = (): JSX.Element => {
   return (

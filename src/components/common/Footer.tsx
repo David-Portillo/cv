@@ -1,6 +1,6 @@
 import React from "react";
-import GithubLogo from "../../styles/assets/images/github-icon.svg";
-import LinkedInLogo from "../../styles/assets/images/linkedin-icon.svg";
+import GithubLogo from "../../assets/images/github-icon.svg";
+import LinkedInLogo from "../../assets/images/linkedin-icon.svg";
 
 const Footer = (): JSX.Element => {
   return (
