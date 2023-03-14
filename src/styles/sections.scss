@@ -2,11 +2,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "photo intro intro";
-  margin: 15px;
+  margin: 45px 15px 15px;
 }
 
 .photo-grid-area {
-  margin: 15px;
   grid-area: photo;
   display: flex;
   flex-direction: column;
@@ -14,17 +13,16 @@
   align-items: center;
 
   .photo {
-    height: 250px;
-    width: 250px;
-    background-color: gray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+    img {
+      width: 250px;
+      border-radius: 8%;
+      box-shadow: 3px 3px 3px $elegant_blue;
+      border: 3px solid $elegant_darker_blue;
+    }
   }
 
   .assortment {
-    margin-top: 10px;
+    margin-top: 25px;
     background: lightblue;
     width: 100%;
     display: flex;
@@ -53,14 +51,14 @@
 
 .paragraph-title {
   font-family: "Montserrat";
-  color: $cream_wheat;
+  color: $faded_cream_cherry;
 }
 
 .faded-paragraph {
   font-family: "Montserrat";
   line-height: 1.7em;
-  font-size: 1.2em;
-  color: $faded_cream_wheat;
+  font-size: 1em;
+  color: $faded_cream_cherry;
 }
 
 .oulined-text {
