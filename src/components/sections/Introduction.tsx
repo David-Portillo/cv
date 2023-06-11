@@ -1,14 +1,19 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 import profile from "../../assets/images/photo-alt.svg";
 
 const Introduction = (): JSX.Element => {
   return (
     <React.Fragment>
       <div className='photo-grid-area'>
-        <div className='photo'>
+        <motion.div
+          className='photo'
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false }}
+        >
           <img src={profile} alt='profile image' />
-        </div>
+        </motion.div>
         <div className='assortment'>
           <div>ICON</div>
           <div>ICON</div>
